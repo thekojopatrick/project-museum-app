@@ -1,0 +1,212 @@
+.fullpage-menu {
+    position: fixed;
+    _right: 0;
+    top: -100%;
+    left: -100%;
+    background-color: white;
+    color: $black;
+    width: 0;
+    height: 0;
+    text-align: center;
+    opacity: 0;
+    display: grid;
+    grid-template-columns: $column-grid-12;
+    grid-template-rows: min-content 1fr;
+    gap: $gap;
+    padding: 4rem 0;
+    transform: translateY(100%);
+    transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    z-index: 1000;
+
+    @include responsive(tab-land) {
+        grid-template-columns: $column-grid-8;
+    }
+    @include responsive(phone) {
+        grid-template-columns: $column-grid-4;
+    }
+}
+
+.show {
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    _right: 0;
+    top: 0;
+    left: 0;
+    transform: translateY(0);
+}
+
+.top-section {
+    grid-column: $center-grid;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    grid-column: col-start 1 / col-end 3;
+    height: 50vh;
+    grid-row: 2/3;
+    align-self: flex-end;
+    justify-self: flex-start;
+
+    @include responsive(phone) {
+        grid-column: $center-grid;
+        align-self: center;
+        justify-self: center;
+        
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        margin: 4rem 0;
+        color: black;
+        position: relative;
+        z-index: 10;
+        transition: all 0.3s ease;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: 25%;
+            _transform: translate(50%, 50%);
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            background-color: #eee;
+            z-index: -1;
+            opacity: 0;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &:hover,
+        &:active {
+            color: $link;
+        }
+
+        &:hover .line {
+            opacity: 1;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        font-family: $font-heading;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3.6rem;
+        line-height: 120%;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+    }
+
+    &-content {
+        grid-row: 2 / 3;
+        grid-column: col-start 5 / col-end 10;
+        _background-color: black;
+
+        @include responsive(tab-land) {
+            grid-column: col-start 3 / col-end 8;
+        }
+
+        @include responsive(phone) {
+            display: none;
+        }
+    }
+}
+
+.number {
+    margin-right: 3.2rem;
+    font-size: 1.8rem;
+}
+.line {
+    margin-left: 1.6rem;
+    width: 4rem;
+    height: 2px;
+    background-color: currentColor;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+//Menu Content
+
+.content {
+    height: 100%;
+
+    _opacity: 1;
+    _visibility: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 15rem);
+    gap: $gap;
+    justify-content: center;
+    align-content: center;
+    transition: all 0.3s ease;
+
+    @include responsive(tab-land) {
+        gap: 0;
+        grid-template-columns: repeat(2, 35rem);
+    }
+
+    &__image {
+        justify-self: center;
+        height: 100%;
+        width: 30rem;
+        grid-row: 1 / 4;
+        object-fit: cover;
+        border: none;
+
+        &--1 {
+            grid-column: 1 / 2;
+            background-color: red;
+            transform: translateY(10%);
+
+            @include responsive(tab-land) {
+                transform: translateY(5%);
+            }
+        }
+        &--2 {
+            grid-column: 2 / 3;
+            background-color: blue;
+            transform: translateY(-10%);
+
+            @include responsive(tab-land) {
+                transform: translateY(-5%);
+            }
+        }
+    }
+
+    // img {
+    //     width: 100%;
+    // }
+}
+
+.menu__item:hover .menu-content .content {
+    opacity: 1;
+    visibility: visible;
+}
+
+//test
+.home .nav-link .content-tab .tab {
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.home .nav-link .content-tab,
+.home .nav-link .content-tab .tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

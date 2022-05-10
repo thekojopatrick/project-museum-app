@@ -1,0 +1,53 @@
+.exhibition {
+    display: flex;
+    align-items: center;
+    &__image {
+        width: 30rem;
+        height: 30rem;
+        img {
+            width: inherit;
+            height: inherit;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: cover;
+        }
+    }
+
+    &-content {
+        width: 30rem;
+        height: 100%;
+        text-align: left;
+        padding: 3.2rem;
+        background-color: $black;
+
+        &__title {
+            color: $white;
+            text-transform: uppercase;
+        }
+
+        &__text {
+            color: #adb5bd;
+        }
+    }
+
+    &__btn {
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: #f1f3f5;
+        padding: 0;
+
+        &--dark {
+            color: $black;
+        }
+
+        &:active,
+        &:hover {
+            background-color: transparent;
+            color: $link;
+        }
+    }
+}

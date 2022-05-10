@@ -1,0 +1,63 @@
+.navbar {
+    grid-column: center-start / center-end;
+    grid-row: 2/3;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include responsive(tab-port) {
+        _grid-column: full-start / full-end;
+    }
+
+    &__nav {
+        text-align: center;
+        _flex-grow: 1;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+
+        @include responsive(tab-port) {
+            display: none;
+        }
+    }
+
+    &__item {
+    }
+
+    &__link {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: $black;
+        margin: 0 4.8rem;
+
+        &:hover,
+        &:active {
+            color: $link;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+
+    @include responsive(tab-land) {
+        grid-template-columns: $column-grid-4;
+    }
+
+    @include responsive(tab-port) {
+        grid-template-columns: $column-grid-4;
+    }
+
+    @include responsive(big-desktop) {
+    }
+}

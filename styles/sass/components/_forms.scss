@@ -1,0 +1,116 @@
+.form {
+    //Contact Form //
+    &-control {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 40rem;
+        border: 1px solid $black;
+
+        @include responsive(phone) {
+            width: 35rem;
+        }
+    }
+
+    &-input {
+        width: 100%;
+        padding: 1.6rem;
+        font-size: 1.6rem;
+        color: $black;
+        border: none;
+        background: transparent;
+        outline: none;
+
+        &::placeholder {
+            font-size: 1.6rem;
+            color: #495057;
+            font-family: inherit;
+        }
+    }
+
+    &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    //End of Contact Form //
+
+    //Search Form //
+    &-search {
+        _max-width: 35vw;
+        width: 60rem;
+        height: 64px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: $shadow;
+        display: flex;
+        align-items: center;
+        padding: 0.8rem;
+
+        @include responsive(phone) {
+            width: 100%;
+        }
+    }
+
+    &-color-picker {
+        _width: 30rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        _position: relative;
+        border-radius: 4px;
+        padding: 1rem 1.6rem;
+        background-color: rgba($color: #e1e1e1, $alpha: 0.5);
+    }
+}
+
+.search {
+    &-input {
+        flex: 1;
+        height: 100%;
+        font-family: inherit;
+        font-size: 1.6rem;
+        padding: 0.8rem;
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+
+    &-btn {
+        height: 100%;
+        padding: 1.6rem 3.2rem;
+        border-radius: 8px;
+    }
+}
+
+.color-input {
+    font-family: inherit;
+    padding: 0 0.6rem;
+    font-size: 1.6rem;
+    _border: none;
+    border: 1px solid transparent;
+    background: transparent;
+    outline: none;
+}
+
+.label {
+    font-family: inherit;
+    display: inline;
+    text-align: center;
+    margin-right: 1.6rem;
+    color: #6e6d7a;
+}
+
+.color-swatch {
+    position: absolute;
+    top: 120%;
+}
+
+//--- Contact Form ---//
+
+.input__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin: 0.8rem;
+}

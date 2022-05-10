@@ -1,0 +1,101 @@
+button {
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+.btn {
+    display: block;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: inherit;
+    font-size: 1.6rem;
+    transition: all 0.25s ease;
+
+    &__icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        color: black;
+        fill: currentColor;
+    }
+
+    &-search {
+        margin-right: 0.8rem;
+    }
+
+    &-menu {
+        margin-left: 0.8rem;
+    }
+
+    &-filter {
+        height: 100%;
+        padding: 1rem 1.6rem;
+        border-radius: 8px;
+        background-color: $button-background;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &-clear {
+        display: inline-block;
+        background-color: $button-background;
+        border-radius: 50%;
+        width: 3.2rem;
+        height: 3.2rem;
+        display: flex;
+        align-items: center;
+        margin: 1.6rem;
+    }
+
+    &:active,
+    &:hover {
+        background-color: black;
+        color: $white;
+    }
+
+    &:hover {
+        .icon {
+            color: $white;
+            fill: currentColor;
+        }
+    }
+}
+
+.open {
+    border-radius: 50%;
+    background-color: black;
+    color: $white;
+}
+
+.open .btn__icon {
+    color: $white;
+    fill: currentColor;
+}
+
+.scroll-top {
+    position: fixed;
+    right: -5%;
+    bottom: -5%;
+    width: 4.5rem;
+    height: 4.5rem;
+    transform: rotate(90deg);
+    background-color: white;
+    box-shadow: $shadow-1;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
+.scroll-top.active {
+    opacity: 1;
+    right: 5%;
+    bottom: 5%;
+}

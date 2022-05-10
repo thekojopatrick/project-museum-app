@@ -1,0 +1,351 @@
+//--- Features Section --- //
+
+.section-features {
+    grid-column: $center-grid;
+    grid-row: 4;
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    @include responsive(tab-land) {
+        grid-column: $full-grid;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    @include responsive(phone) {
+        grid-column: $center-grid;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
+
+//--- About Section --- //
+
+.section-about {
+    grid-row: 5 / 6;
+    grid-column: $center-grid;
+    height: 90rem;
+    margin: 4rem 0;
+    _align-self: center;
+    justify-self: center;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
+    grid-template-rows: repeat(3, minmax(min-content, 1fr));
+    column-gap: 10rem;
+    justify-content: center;
+    align-items: center;
+
+    @include responsive(tab-land) {
+        grid-column: $full-grid;
+    }
+    @include responsive(tab-port) {
+        grid-column: $center-grid;
+    }
+
+    @include responsive(phone) {
+        grid-column: $center-grid;
+        height: 1200px;
+        grid-row: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0;
+    }
+    @include responsive(small-phone) {
+        width: 100%;
+        margin: 8rem 0;
+        margin-top: 4rem;
+    }
+}
+
+.about {
+    &__image {
+        height: 40rem;
+        width: 45rem;
+
+        img {
+            width: inherit;
+            height: inherit;
+            background-repeat: no-repeat;
+            background-position: top;
+            object-fit: cover;
+            background-size: cover;
+        }
+
+        @include responsive(tab-land) {
+            width: 50rem;
+        }
+        @include responsive(tab-port) {
+            width: 100%;
+        }
+        @include responsive(phone) {
+            width: 100%;
+        }
+        @include responsive(small-phone) {
+            width: 95%;
+        }
+    }
+    &-content {
+        width: 45rem;
+
+        @include responsive(small-phone) {
+            width: 95%;
+        }
+    }
+
+    &__heading {
+        grid-column: 1 /-1;
+        grid-row: 1/2;
+        margin: 1.5rem 0;
+
+        @include responsive(tab-port) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__btn {
+        grid-row: 3;
+        grid-column: 2 / 3;
+        align-self: center;
+        justify-self: flex-start;
+        text-decoration: none;
+        color: $black;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+        transition: all 0.25s ease;
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            bottom: -5px;
+            background-color: currentColor;
+            text-align: left;
+        }
+
+        &:hover,
+        &:active {
+            background-color: transparent;
+            color: $link;
+        }
+
+        @include responsive(tab-land) {
+            align-self: flex-start;
+            justify-content: flex-start;
+            text-align: left;
+            width: 25%;
+            display: inline-block;
+        }
+
+        @include responsive(tab-port) {
+            align-self: flex-start;
+            justify-content: flex-start;
+            text-align: left;
+            width: 30%;
+            display: inline-block;
+        }
+
+        @include responsive(small-phone) {
+            width: 35%;
+        }
+    }
+}
+
+.what-we-do {
+    grid-column: 1 / 2;
+    grid-row: 2/3;
+}
+
+.vision-and-mission {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+//--- Shop Section --- //
+
+.section-shop {
+    grid-column: $center-grid;
+    grid-row: 6 / 7;
+    _margin: 4rem 0;
+    height: 50rem;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    _align-items: center;
+    justify-content: center;
+
+    @include responsive(tab-land) {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    @include responsive(tab-port) {
+        height: 70rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    @include responsive(phone) {
+        height: 70rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.shop {
+    &__image {
+        grid-column: 1 / span 6;
+        align-self: center;
+        width: 100%;
+        height: 45rem;
+        transform: translateX(10%);
+
+        @include responsive(tab-land) {
+            transform: translateX(5%);
+        }
+
+        @include responsive(tab-port) {
+            transform: translateX(0);
+            order: 2;
+            height: 50%;
+        }
+        @include responsive(phone) {
+            transform: translateX(0);
+            order: 2;
+            height: 50%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        grid-column: 7 / -1;
+        text-align: left;
+        background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 10rem;
+
+        @include responsive(tab-land) {
+            _width: 90%;
+        }
+        @include responsive(tab-port) {
+            padding: 4rem;
+            transform: translateX(0);
+            height: 50%;
+        }
+        @include responsive(phone) {
+            padding: 4rem;
+            transform: translateX(0);
+            height: 50%;
+        }
+    }
+
+    &__btn {
+        text-decoration: none;
+        display: inline-block;
+        padding: 0.8rem 1.6rem;
+        color: $black;
+        font-size: 1.6rem;
+        font-weight: 500;
+        border: 1px solid $black;
+    }
+}
+
+//--- Exhibition Section --- //
+
+.section-exhibitions {
+    grid-row: 7 / 8;
+    grid-column: $full-grid;
+    align-self: center;
+    _height: 40rem;
+    margin: 8rem 0;
+    padding-left: 1.5rem;
+    _margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: $column-grid-12;
+    overflow: hidden;
+    grid-template-rows: 10rem max-content;
+
+    @include responsive(tab-land) {
+        display: grid;
+        grid-template-columns: $column-grid-4;
+        margin: 4rem 0;
+    }
+}
+
+.section-title {
+    grid-column: $center-grid;
+    grid-row: 1 / 2;
+    align-self: center;
+    width: 100%;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.exhibitions-container {
+    grid-column: $full-grid;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 6rem));
+    column-gap: 1.5rem;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+//--- Contact Section --- //
+.section-contact {
+    grid-row: 8 /9;
+    grid-column: $center-grid;
+    _justify-self: center;
+    background: #f8f9fa;
+    height: 50rem;
+    margin: 4rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    align-items: center;
+    justify-content: space-evenly;
+
+    @include responsive(phone) {
+        text-align: left;
+    }
+}
+
+.contact {
+    &-information {
+        margin: 5rem 10rem;
+
+        @include responsive(phone) {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,116 @@
+.footer {
+    grid-row: 9 / -1;
+    grid-column: $full-grid;
+    height: 40rem;
+    background-color: $black;
+    _justify-self: center;
+    display: grid;
+    padding-top: 4rem;
+    margin-top: 4rem;
+
+    grid-template-columns: $column-grid-12;
+    grid-template-rows: max-content 10rem;
+    justify-content: center;
+
+    @include responsive(tab-port) {
+        grid-template-columns: $column-grid-8;
+    }
+
+    @include responsive(phone) {
+        grid-template-columns: $column-grid-4;
+        padding: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: left;
+        justify-content: flex-start;
+        height: 100%;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 130%;
+        font-weight: inherit;
+        color: #868e96;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin: 2.4rem 0;
+    }
+
+    &__nav {
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        text-decoration: none;
+        margin: 1.6rem 0;
+        color: #f8f9fa;
+        font-size: 1.8rem;
+        line-height: 150%;
+    }
+
+    &__link {
+        font-family: inherit;
+        text-decoration: none;
+        line-height: 150%;
+        font-weight: inherit;
+        color: inherit;
+
+        &:hover,
+        &:active {
+            color: $link;
+        }
+    }
+}
+
+.explore-the-web {
+    grid-column: 2 / span 4;
+
+    @include responsive(tab-port) {
+        grid-column: col-start 1 / span 2;
+    }
+}
+
+.contact-info {
+    grid-column: 6 / span 4;
+    _width: 30rem;
+
+    @include responsive(tab-port) {
+        grid-column: col-start 4 / span 3;
+    }
+}
+
+.find-us {
+    grid-column: col-start 10 / col-end -1;
+
+    @include responsive(tab-port) {
+        grid-column: col-start 7 / span 2;
+    }
+}
+
+.additional-information {
+    grid-row: 2;
+    grid-column: col-start 1 / col-end -1;
+    align-self: center;
+
+    .footer {
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__item {
+            color: #adb5bd;
+
+            &:not(:last-child) {
+                margin-right: 1.6rem;
+            }
+        }
+    }
+}

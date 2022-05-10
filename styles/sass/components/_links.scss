@@ -1,0 +1,29 @@
+a {
+    text-decoration: none;
+    color: $black;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: $black;
+    fill: currentColor;
+    margin: 1rem;
+
+    &-search {
+    }
+
+    &-clear {
+    }
+
+    &-filter {
+        margin: 0;
+    }
+
+    &-menu-close {
+        color: white;
+        fill: currentColor;
+    }
+}

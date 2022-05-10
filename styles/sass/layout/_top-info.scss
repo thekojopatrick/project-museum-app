@@ -1,0 +1,40 @@
+.top-info {
+  grid-column: $full-grid;
+  grid-row: 1/2;
+
+  align-self: center;
+  _justify-self: center;
+
+  padding: 1.5rem 0;
+  border-bottom: 0.5px solid #dee2e6;
+
+  display: grid;
+  grid-template-columns: $column-grid-12;
+  column-gap: $gap;
+
+  &__content {
+    grid-column: $center-grid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include responsive(tab-land) {
+    grid-template-columns: $column-grid-8;
+    column-gap: 0;
+  }
+
+  @include responsive(tab-port) {
+    grid-template-columns: $column-grid-8;
+    column-gap: 0;
+  }
+
+  @include responsive(phone) {
+    grid-template-columns: $column-grid-4;
+    column-gap: 0;
+    display: none;
+  }
+
+  @include responsive(big-desktop) {
+  }
+}

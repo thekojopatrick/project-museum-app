@@ -1,0 +1,35 @@
+// Fonts
+$font-heading: "BespokeSerif-Bold", serif;
+$font-body: "Satoshi-Medium", sans-serif;
+
+// Colors
+//$background: #f0eff1;
+$button-background: rgb(239, 239, 239);
+$background: #fff;
+$white: #fff;
+$black: #000;
+$link: #fd5a1e;
+$light-blue: #a5d8ff;
+
+$overlay: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+$shadow: 0px 8px 20px rgb(0 0 0 / 20%);
+$shadow-1: 0 1rem 3rem rgba($black, 0.1);
+
+//Grid
+$column-grid-12: [full-start] minmax(15rem, 1fr) [center-start]
+    repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end]) [center-end] minmax(15rem, 1fr) [full-end];
+$gap: 1.5rem;
+$center-grid: center-start / center-end;
+$full-grid: full-start / full-end;
+
+$column-grid-8: [full-start] minmax(6rem, 1fr) [center-start]
+    repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+$column-grid-4: [full-start] 1.6rem [center-start] repeat(4, [col-start] minmax(min-content, 1fr) [col-end])
+    [center-end] 1.6rem [full-end];
+
+// Breakpoints
+$layout-breakpoint-large: 1920px;
+$layout-breakpoint-medium: 1440px;
+$layout-breakpoint-small: 960px;
+$layout-breakpoint-xsmall: 480px;

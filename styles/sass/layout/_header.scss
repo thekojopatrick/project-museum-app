@@ -1,140 +1,17 @@
-.header {
-    grid-column: $full-grid;
-    _background-color: #f1f3f5;
-    grid-row: 3 / 4;
+.carousels {
+  _background-color: #0c66bf;
+  grid-column: $full-grid;
+  grid-row: 3 / 4;
 
-    display: grid;
-    grid-template-columns: $column-grid-12;
-    column-gap: $gap;
-    color: white;
+  @include responsive(tab-port) {
+    grid-template-columns: $column-grid-8;
+  }
 
-    overflow-x: hidden;
-
-    @include responsive(tab-port) {
-        grid-template-columns: $column-grid-8;
-    }
-
-    @include responsive(phone) {
-        grid-template-columns: $column-grid-4;
-    }
-
-    position: relative;
-    &__background {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-
-        grid-column: $full-grid;
-        z-index: 0;
-        // display: flex;
-        // align-items: center;
-        // _justify-content: center;
-
-        ul {
-            width: 100%;
-            height: 100%;
-
-            display: flex;
-            list-style: none;
-            position: absolute;
-            overflow: hidden;
-            background: $overlay;
-
-            @include responsive(tab-port) {
-                width: 1000px;
-            }
-            @include responsive(phone) {
-                width: 700px;
-            }
-
-            li {
-                width: 100vw;
-                height: 100%;
-                text-decoration: none;
-                img {
-                    height: 100%;
-                    background-position: center;
-                    background-size: cover;
-                    object-fit: cover;
-                    width: inherit;
-                    @include responsive(tab-port) {
-                        width: 1000px;
-                    }
-                    @include responsive(phone) {
-                        width: 700px;
-                    }
-                }
-            }
-        }
-    }
-
-    &__content {
-        width: 100%;
-        position: absolute;
-        grid-column: $center-grid;
-        align-self: center;
-        justify-self: start;
-        z-index: 5;
-
-        @include responsive(tab-port) {
-            width: 600px;
-        }
-
-        @include responsive(phone) {
-            width: 400px;
-        }
-
-        ul {
-            display: flex;
-            list-style: none;
-            width: 100%;
-
-            @include responsive(tab-port) {
-                width: 600px;
-            }
-            @include responsive(phone) {
-                width: 400px;
-            }
-
-            li {
-                opacity: 0;
-                display: flex;
-                align-items: center;
-                position: absolute;
-                @include responsive(tab-port) {
-                    width: 600px;
-                }
-                @include responsive(phone) {
-                    width: 350px;
-                }
-            }
-        }
-    }
+  @include responsive(phone) {
+    grid-template-columns: $column-grid-4;
+  }
 }
-
-.slider {
-    &__buttons {
-        display: flex;
-        flex-direction: row;
-        grid-column: col-start 11 / col-end 12;
-        align-self: flex-end;
-        justify-self: center;
-        background-color: $white;
-        margin-top: 0.8rem;
-        z-index: 10;
-    }
-}
-
-.overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background-image: $overlay;
-    z-index: 2;
+.splide {
+  height: 100%;
+  width: 100%;
 }

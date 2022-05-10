@@ -1,8 +1,7 @@
-import type { NextPage } from "next";
 import { BiSearch, BiMenu } from "react-icons/bi";
 import Link from "next/link";
 
-const Navbar: NextPage = () => {
+const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar__logo">

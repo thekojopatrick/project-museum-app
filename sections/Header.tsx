@@ -23,7 +23,7 @@ const Header = () => {
       <Splide options={{splideOption}}>
         {carousels.map((carousel) => {
           return (
-            <SplideSlide key={carousel.id} className="header">
+            <SplideSlide key={carousel.id}>
               <Image
                 layout="fill"
                 src={carousel.img}

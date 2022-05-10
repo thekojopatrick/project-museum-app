@@ -1,39 +1,39 @@
 import React from "react";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import Carousel from "../components/Carousel";
 import { carousels } from "../utils/constants";
 import Image from "next/image";
 
 const Header = () => {
-  const splideOption = {
-    rewind: true,
+  let splideOptions = {
     type: "fade",
-    perPage: 3,
+    autoplay: true,
     cover: true,
-    height: "10rem",
+    rewind: true,
     lazyLoad: "nearby",
-    breakpoints: {
-      height: "6rem",
-    },
   };
 
   return (
-    <header className="carousels ">
-      <Splide options={{splideOption}}>
-        {carousels.map((carousel) => {
-          return (
-            <SplideSlide key={carousel.id}>
-              <Image
-                layout="fill"
-                src={carousel.img}
-                alt={carousel.title}
-              />
-            </SplideSlide>
-          );
-        })}
-      </Splide>
-    </header>
+    <Splide
+      tag="header"
+      className="carousels"
+      options={{
+        type:'loop',
+        autoplay: true,
+        cover: true,
+        rewind: true,
+        lazyLoad: "nearby",
+      }}
+      aria-labelledby="hero banner"
+    >
+      {carousels.map((carousel) => {
+        return (
+          <SplideSlide key={carousel.id}>
+            <Carousel carousel={carousel} />
+          </SplideSlide>
+        );
+      })}
+    </Splide>
   );
 };
 

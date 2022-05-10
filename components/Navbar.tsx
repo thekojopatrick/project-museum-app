@@ -1,5 +1,6 @@
 import { BiSearch, BiMenu } from "react-icons/bi";
 import Link from "next/link";
+import { navlinks } from "../utils/constants";
 
 const Navbar = () => {
   return (
@@ -9,31 +10,15 @@ const Navbar = () => {
       </div>
       <nav className="navbar__nav">
         <ul className="navbar__list">
-          <li className="navbar__item">
-            <Link href="#" className="navbar__link">
-              Home
-            </Link>
-          </li>
-          <li className="navbar__item">
-            <Link href="#" className="navbar__link">
-              About
-            </Link>
-          </li>
-          <li className="navbar__item">
-            <Link href="#" className="navbar__link">
-              Shop
-            </Link>
-          </li>
-          <li className="navbar__item">
-            <Link href="#" className="navbar__link">
-              Exhibitions
-            </Link>
-          </li>
-          <li className="navbar__item">
-            <Link href="#" className="navbar__link">
-              Contact
-            </Link>
-          </li>
+          {navlinks.map(({ id, name, path }) => {
+            return (
+              <li key={id} className="navbar__item">
+                <Link href={path}>
+                  <a className="navbar__link">{name}</a>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
       <div className="navbar__buttons">

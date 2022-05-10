@@ -1,3 +1,33 @@
+const navlinks = [
+  {
+    id:1,
+    name: "Home",
+    path: "#home",
+  },
+  {
+    id:2,
+    name: "About",
+    path: "#about",
+  },
+  {
+    id:3,
+    name: "Shop",
+    path: "#shop",
+  },
+  {
+    id:4,
+    name: "Exhibition",
+    path: "#exhibition",
+  },
+  {
+    id:5,
+    name: "Contact",
+    path: "#contact",
+  },
+]
+
+
+
 const footer = [
   {
     id: 1,
@@ -165,4 +195,4 @@ const exhibitions = [
   },
 ];
 
-export { carousels, features, about, shop, exhibitions,footer };
+export { carousels, features, about, shop, exhibitions,footer ,navlinks};

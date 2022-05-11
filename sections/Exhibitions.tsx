@@ -2,9 +2,9 @@ import Link from "next/link";
 import Exhibition from "../components/Exhibition";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-import { exhibitions } from "../utils/constants";
+import { exhibitions,SlidesProps } from "../utils/constants";
 
-const Exhibitions = () => {
+const Exhibitions = ({ options }: SlidesProps) => {
   return (
     <section className="section-exhibitions" id="exhibitions">
       <div className="section-title">

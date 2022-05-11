@@ -27,13 +27,10 @@
     color: $white;
 
     @include responsive(tab-port) {
-      text-align: center;
-      place-content: center;
       grid-template-columns: $column-grid-8;
     }
 
     @include responsive(phone) {
-      text-align: center;
       grid-template-columns: $column-grid-4;
     }
   }
@@ -61,15 +58,18 @@
     display: flex;
     grid-column: $center-grid;
     align-self: center;
+    align-items: center;
     justify-self: start;
-    z-index: 5;
+    z-index: 10;
 
     @include responsive(tab-port) {
-      width: 600px;
+      text-align: center;
+      justify-content: center;
     }
 
     @include responsive(phone) {
-      width: 400px;
+      text-align: center;
+      justify-content: center;
     }
   }
 }

@@ -38,7 +38,6 @@ body {
 
 .app {
     width: 100vw;
-    border: solid red 2px;
 }
 
 .container {
@@ -68,11 +67,12 @@ body {
         gap: 0;
     }
     @include responsive(tab-port) {
+        grid-template-rows: calc(7rem - 1.5rem) calc(7rem);
         grid-template-columns: $column-grid-8;
     }
     @include responsive(phone) {
         grid-template-columns: $column-grid-4;
-        grid-template-rows: calc(3rem - 1.5rem) calc(7rem);
+        grid-template-rows: calc(1rem) calc(8rem);
     }
 }
 

@@ -2,7 +2,7 @@
 
 .section-features {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 4rem auto;
     display: flex;
     gap: $gap;
     flex-direction: row;
@@ -11,12 +11,14 @@
     width: 95%;
 
     @include responsive(tab-land) {
+        margin: 2rem auto;
         width: 100%;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
 
     @include responsive(phone) {
+        margin: 1.5rem auto;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }

@@ -51,20 +51,13 @@ body {
     grid-template-columns: $column-grid-12;
     gap: $gap;
 
-    &--fluid {
-        margin: 0;
-        max-width: 100%;
-    }
-
     @include responsive(tab-land) {
-        grid-template-rows:
-            calc(80vh - 1.5rem) min-content repeat(
-                4,
-                minmax(min-content, 50rem)
-            )
-            min-content !important;
         grid-template-columns: $column-grid-8;
-        gap: 0;
+    }
+    
+    @include responsive(tab-port) {
+        display: flex;
+        flex-direction: column;
     }
 
     @include responsive(phone) {

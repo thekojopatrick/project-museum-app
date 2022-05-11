@@ -102,50 +102,6 @@
     }
 }
 
-//--- Exhibition Section --- //
-
-.section-exhibitions {
-    grid-row: 7 / 8;
-    grid-column: $full-grid;
-    align-self: center;
-    _height: 40rem;
-    margin: 8rem 0;
-    padding-left: 1.5rem;
-    _margin-bottom: 4rem;
-    display: grid;
-    grid-template-columns: $column-grid-12;
-    overflow: hidden;
-    grid-template-rows: 10rem max-content;
-
-    @include responsive(tab-land) {
-        display: grid;
-        grid-template-columns: $column-grid-4;
-        margin: 4rem 0;
-    }
-}
-
-.section-title {
-    grid-column: $center-grid;
-    grid-row: 1 / 2;
-    align-self: center;
-    width: 100%;
-    margin: 4rem auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.exhibitions-container {
-    grid-column: $full-grid;
-    grid-row: 2 / 3;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min-content, 6rem));
-    column-gap: 1.5rem;
-    overflow-x: auto;
-    &::-webkit-scrollbar {
-        width: 0;
-    }
-}
 
 //--- Contact Section --- //
 .section-contact {

@@ -54,7 +54,7 @@ body {
     @include responsive(tab-land) {
         grid-template-columns: $column-grid-8;
     }
-    
+
     @include responsive(tab-port) {
         display: flex;
         flex-direction: column;

@@ -1,13 +1,27 @@
-export interface SlidesOptions {
+export interface SlidesProps {
     options?: any;
 }
 
 const slideOptions = {
-  type:'loop',
-  autoplay: true,
-  cover: true,
-  rewind: true,
-  lazyLoad: "nearby",
+    type: "loop",
+    autoplay: true,
+    cover: true,
+    rewind: true,
+    lazyLoad: "nearby",
+};
+
+const scrollOptions = {
+    type: "loop",
+    gap: "2rem",
+    drag: "free",
+    arrows: false,
+    pagination: false,
+    autoScroll: {
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        rewind: true,
+        speed: 1,
+    },
 };
 
 const navlinks = [
@@ -204,4 +218,14 @@ const exhibitions = [
     },
 ];
 
-export {slideOptions, carousels, features, about, shop, exhibitions, footer, navlinks };
+export {
+    slideOptions,
+    scrollOptions,
+    carousels,
+    features,
+    about,
+    shop,
+    exhibitions,
+    footer,
+    navlinks,
+};

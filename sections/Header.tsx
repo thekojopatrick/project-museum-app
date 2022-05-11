@@ -1,10 +1,10 @@
 import React from "react";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import Carousel from "../components/Carousel";
-import { carousels,SlidesOptions } from "../utils/constants";
+import { carousels,SlidesProps } from "../utils/constants";
 
 
-const Header = ({options}:SlidesOptions) => {
+const Header = ({options}:SlidesProps) => {
  
   return (
     <Splide

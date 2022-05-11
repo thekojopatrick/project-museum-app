@@ -1,6 +1,7 @@
 //--- About Section --- //
 
 .section-about {
+  
   grid-row: 3 / 4;
   grid-column: $center-grid;
   height: 90rem;
@@ -16,6 +17,9 @@
   align-items: center;
 
   @include responsive(tab-land) {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
     grid-column: $full-grid;
   }
   @include responsive(tab-port) {

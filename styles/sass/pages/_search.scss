@@ -13,7 +13,7 @@
         }
         @include responsive(phone) {
             grid-template-columns: $column-grid-4;
-            grid-template-rows: calc(0rem - 1.5rem) calc(7rem - 1.5rem) calc(25rem - 1.5rem) repeat(
+            grid-template-rows: calc(3rem - 1.5rem) calc(7rem - 1.5rem) calc(25rem - 1.5rem) repeat(
                     2,
                     minmax(min-content, 1fr)
                 ) !important;

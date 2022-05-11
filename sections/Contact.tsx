@@ -6,7 +6,7 @@ const Contact = () => {
     <section className="section-contact" id="contact">
       <div className="contact-information">
         <h2 className="heading heading-2">Visit Us</h2>
-        <p className="text text-lg-x mt-lg">Museumstraat 1, Amsterdam</p>
+        <p className="text text-lg-x mt-lg">Museum street 1, Amsterdam</p>
         <p className="text text-lg-x mt-lg">Daily, 9am - 5pm</p>
       </div>
 

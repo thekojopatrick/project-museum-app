@@ -8,11 +8,12 @@ import {
   Exhibitions,
   Contact,
 } from "../sections";
+import { slideOptions } from "../utils/constants";
 
 const Home: NextPage = () => {
   return (
     <Layout title={"Home"} parentClass={"container"}>
-      <Header />
+      <Header options={slideOptions}/>
       <Features />
       <About />
       <Shop />

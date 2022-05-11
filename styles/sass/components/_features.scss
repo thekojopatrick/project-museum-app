@@ -4,8 +4,8 @@
     grid-column: $center-grid;
     grid-row: 2/3;
     display: flex;
+    gap: $gap;
     flex-direction: row;
-
     align-items: center;
     justify-content: center;
 

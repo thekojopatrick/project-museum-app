@@ -13,14 +13,14 @@ const Layout = ({ title, parentClass, children }: LayoutProps) => {
     const siteTitle: string = title || `Title`;
 
     return (
-        <>
+        <div className="app">
             <nav className="nav-container">
                 <TopBar />
                 <Navbar />
             </nav>
             <main className={parentClass}>{children}</main>
             <Footer />
-        </>
+        </div>
     );
 };
 

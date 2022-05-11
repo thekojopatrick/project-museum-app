@@ -8,15 +8,15 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: 95%;
 
     @include responsive(tab-land) {
-        grid-column: $full-grid;
+        width: 100%;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
 
     @include responsive(phone) {
-        grid-column: $center-grid;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }

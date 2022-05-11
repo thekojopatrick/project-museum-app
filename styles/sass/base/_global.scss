@@ -57,12 +57,13 @@ body {
     }
 
     @include responsive(tab-land) {
-        display: flex;
-        flex-direction: column;
+       
     }
     @include responsive(tab-port) {
     }
     @include responsive(phone) {
+        display: flex;
+        flex-direction: column;
     }
 }
 

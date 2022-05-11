@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Exhibition from "../components/Exhibition";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import { exhibitions } from "../utils/constants";
 
 const Exhibitions = () => {

@@ -1,9 +1,9 @@
 //--- Shop Section --- //
 
 .section-shop {
-    grid-column: $center-grid;
-    grid-row: 4 / 5;
     _margin: 4rem 0;
+    max-width: 1440px;
+    margin: 0 auto;
     height: 50rem;
 
     display: grid;
@@ -101,7 +101,6 @@
         border: 1px solid $black;
     }
 }
-
 
 //--- Contact Section --- //
 .section-contact {

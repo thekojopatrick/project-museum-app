@@ -19,12 +19,23 @@
     height: 100%;
   }
 
-  &__slide {
+  &__slide--header {
     display: grid !important;
     grid-template-columns: $column-grid-12;
     column-gap: $gap;
     height: 100%;
     color: $white;
+
+    @include responsive(tab-port) {
+      text-align: center;
+      place-content: center;
+      grid-template-columns: $column-grid-8;
+    }
+
+    @include responsive(phone) {
+      text-align: center;
+      grid-template-columns: $column-grid-4;
+    }
   }
 
   &__slide img {

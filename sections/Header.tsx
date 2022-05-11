@@ -28,7 +28,7 @@ const Header = () => {
     >
       {carousels.map((carousel) => {
         return (
-          <SplideSlide key={carousel.id}>
+          <SplideSlide className="splide__slide--header" key={carousel.id}>
             <Carousel carousel={carousel} />
           </SplideSlide>
         );

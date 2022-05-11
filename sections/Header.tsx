@@ -1,29 +1,16 @@
 import React from "react";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import Carousel from "../components/Carousel";
-import { carousels } from "../utils/constants";
-import Image from "next/image";
+import { carousels,SlidesOptions } from "../utils/constants";
 
-const Header = () => {
-  let splideOptions = {
-    type: "fade",
-    autoplay: true,
-    cover: true,
-    rewind: true,
-    lazyLoad: "nearby",
-  };
 
+const Header = ({options}:SlidesOptions) => {
+ 
   return (
     <Splide
       tag="header"
       className="carousels"
-      options={{
-        type:'loop',
-        autoplay: true,
-        cover: true,
-        rewind: true,
-        lazyLoad: "nearby",
-      }}
+      options={options}
       aria-labelledby="hero banner"
     >
       {carousels.map((carousel) => {

@@ -5,6 +5,9 @@
 @import "abstracts/utilities";
 @import "abstracts/mixin";
 
+// --- VENDORS --- //
+@import "vendors/splide";
+
 // --- BASE --- //
 @import "base/reset";
 @import "base/global";
@@ -34,3 +37,4 @@
 // --- PAGES --- //
 @import "pages/index";
 @import "pages/search";
+

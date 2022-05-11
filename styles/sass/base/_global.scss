@@ -57,24 +57,12 @@ body {
     }
 
     @include responsive(tab-land) {
-        grid-template-rows: calc(80vh - 1.5rem) min-content repeat(
-                4,
-                minmax(min-content, 50rem)
-            );
-        grid-template-columns: $column-grid-8;
-        gap: 0;
+        display: flex;
+        flex-direction: column;
     }
     @include responsive(tab-port) {
-        grid-template-columns: $column-grid-8;
-        gap: 0;
     }
     @include responsive(phone) {
-        grid-template-columns: $column-grid-4;
-        grid-template-rows: calc(80vh - 1.5rem) min-content repeat(
-                4,
-                minmax(min-content, 50rem)
-            );
-        gap: 0;
     }
 }
 
@@ -96,6 +84,21 @@ body {
         grid-template-columns: $column-grid-4;
         grid-template-rows: calc(3rem - 1.5rem) calc(7rem);
     }
+}
+
+.hero-container {
+}
+
+.features-container {
+}
+
+.about-container {
+}
+
+.exhibitions-container {
+}
+
+.contact-container {
 }
 
 .content {

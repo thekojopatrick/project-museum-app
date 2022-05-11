@@ -1,10 +1,12 @@
 import Layout from "../components/Layout";
 import { FiFilter } from "react-icons/fi";
 import SearchField from "../components/SearchField";
+import { Header } from "../sections";
 
 const Search = () => {
     return (
-        <Layout parentClass="">
+        <Layout parentClass="container">
+            <Header/>
             <header className="search-header">
                 <SearchField />
                 <>

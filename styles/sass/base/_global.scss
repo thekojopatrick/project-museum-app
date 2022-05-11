@@ -36,12 +36,13 @@ body {
     position: relative;
 }
 
-.app{
-  width: 100vw;
-  border: solid red 2px;
+.app {
+    width: 100vw;
+    border: solid red 2px;
 }
 
 .container {
+    border: solid blue 2px;
     display: grid;
     grid-template-rows: calc(80vh - 1.5rem) min-content repeat(
             4,
@@ -86,6 +87,7 @@ body {
 
     @include responsive(tab-land) {
         grid-template-columns: $column-grid-8;
+        gap: 0;
     }
     @include responsive(tab-port) {
         grid-template-columns: $column-grid-8;

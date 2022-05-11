@@ -28,7 +28,7 @@ const navlinks = [
     {
         id: 1,
         name: "Home",
-        path: "#home",
+        path: "/",
     },
     {
         id: 2,
@@ -43,12 +43,12 @@ const navlinks = [
     {
         id: 4,
         name: "Exhibition",
-        path: "#exhibition",
+        path: "/#exhibitions",
     },
     {
         id: 5,
         name: "Contact",
-        path: "#contact",
+        path: "/#contact",
     },
 ];
 

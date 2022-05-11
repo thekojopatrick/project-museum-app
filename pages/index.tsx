@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Layout from "../components/Layout";
+import { slideOptions } from "../utils/constants";
 import {
   Header,
   Features,
@@ -8,7 +9,6 @@ import {
   Exhibitions,
   Contact,
 } from "../sections";
-import { slideOptions } from "../utils/constants";
 
 const Home: NextPage = () => {
   return (

@@ -1,7 +1,7 @@
 .carousels {
   _background-color: #0c66bf;
   grid-column: $full-grid;
-  grid-row: 3 / 4;
+  grid-row: 1 / 2;
 
   @include responsive(tab-port) {
     grid-template-columns: $column-grid-8;

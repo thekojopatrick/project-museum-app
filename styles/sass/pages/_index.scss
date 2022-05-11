@@ -2,7 +2,7 @@
 
 .section-shop {
     grid-column: $center-grid;
-    grid-row: 6 / 7;
+    grid-row: 4 / 5;
     _margin: 4rem 0;
     height: 50rem;
 
@@ -105,7 +105,7 @@
 
 //--- Contact Section --- //
 .section-contact {
-    grid-row: 8 /9;
+    grid-row: 6 /7;
     grid-column: $center-grid;
     _justify-self: center;
     background: #f8f9fa;

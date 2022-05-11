@@ -1,75 +1,99 @@
 *,
 *::after,
 *::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: 62.5%;
-  box-sizing: inherit;
+    font-size: 62.5%;
+    box-sizing: inherit;
 
-  @include responsive(tab-land) {
-    //width < 1200
-    font-size: 56.25%; //1rem = 9px , 9/16 = 56.25%
-  }
+    @include responsive(tab-land) {
+        //width < 1200
+        font-size: 56.25%; //1rem = 9px , 9/16 = 56.25%
+    }
 
-  @include responsive(tab-port) {
-    //width < 900
-    font-size: 50%; //1rem = 8px , 8/16 = 50%
-  }
+    @include responsive(tab-port) {
+        //width < 900
+        font-size: 50%; //1rem = 8px , 8/16 = 50%
+    }
 
-  @include responsive(big-desktop) {
-    font-size: 75%; //1rem = 12px , 12/16 = 75%
-  }
+    @include responsive(big-desktop) {
+        font-size: 75%; //1rem = 12px , 12/16 = 75%
+    }
 }
 
 body {
-  font-family: $font-body;
-  font-weight: 500;
-  background: $background;
-  font-size: 1.6rem;
-  line-height: 1.25;
-  width: 100vw;
-  overflow-x: hidden;
-  position: relative;
+    font-family: $font-body;
+    font-weight: 500;
+    background: $background;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    width: 100vw;
+    overflow-x: hidden;
+    position: relative;
 }
 
 .container {
-  display: grid;
-  grid-template-rows:
-    calc(5rem - 1.5rem) calc(7rem - 1.5rem) calc(80vh - 1.5rem) min-content repeat(4, minmax(min-content, 50rem))
-    min-content;
-  grid-template-columns: $column-grid-12;
-  gap: $gap;
-
-  &--fluid {
-    margin: 0;
-    max-width: 100%;
-  }
-
-  @include responsive(tab-land) {
+    display: grid;
     grid-template-rows:
-      calc(5rem - 1.5rem) calc(7rem - 1.5rem) calc(80vh - 1.5rem) min-content repeat(4, minmax(min-content, 50rem))
-      min-content !important;
-    grid-template-columns: $column-grid-8;
-    gap: 0;
-  }
-  @include responsive(tab-port) {
-    grid-template-columns: $column-grid-8;
-    gap: 0;
-  }
-  @include responsive(phone) {
-    grid-template-columns: $column-grid-4;
-    grid-template-rows:
-      calc(0rem - 1.5rem) calc(7rem) calc(80vh - 1.5rem) min-content repeat(4, minmax(min-content, 50rem))
-      min-content !important;
-    gap: 0;
-  }
+        calc(80vh - 1.5rem) min-content repeat(4, minmax(min-content, 50rem))
+        min-content;
+    grid-template-columns: $column-grid-12;
+    gap: $gap;
+
+    &--fluid {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    @include responsive(tab-land) {
+        grid-template-rows:
+            calc(80vh - 1.5rem) min-content repeat(
+                4,
+                minmax(min-content, 50rem)
+            )
+            min-content !important;
+        grid-template-columns: $column-grid-8;
+        gap: 0;
+    }
+    @include responsive(tab-port) {
+        grid-template-columns: $column-grid-8;
+        gap: 0;
+    }
+    @include responsive(phone) {
+        grid-template-columns: $column-grid-4;
+        grid-template-rows:
+            calc(80vh - 1.5rem) min-content repeat(
+                4,
+                minmax(min-content, 50rem)
+            )
+            min-content !important;
+        gap: 0;
+    }
+}
+
+.nav-container {
+    display: grid;
+    grid-template-rows: calc(5rem - 1.5rem) calc(7rem - 1.5rem);
+    grid-template-columns: $column-grid-12;
+    gap: $gap;
+
+    @include responsive(tab-land) {
+        grid-template-columns: $column-grid-8;
+    }
+    @include responsive(tab-port) {
+        grid-template-columns: $column-grid-8;
+    }
+    @include responsive(phone) {
+        grid-template-columns: $column-grid-4;
+        grid-template-rows: calc(3rem - 1.5rem) calc(7rem);
+    }
 }
 
 .content {
-  max-width: 1140px;
-  margin: 0 auto;
+    max-width: 1140px;
+    margin: 0 auto;
 }

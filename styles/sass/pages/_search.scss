@@ -35,6 +35,7 @@
     }
 
     &-body {
+        height: 90vh;
         grid-column: $center-grid;
         _display: flex;
         display: grid;

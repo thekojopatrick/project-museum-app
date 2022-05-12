@@ -1,0 +1,28 @@
+.color-picker {
+    h5 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 0.4rem;
+    }
+
+    &__colors {
+        _width: 30rem;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 1px;
+        padding: 1rem 0.8rem;
+        background-color: rgba($color: #e1e1e1, $alpha: 0.5);
+
+        button {
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}

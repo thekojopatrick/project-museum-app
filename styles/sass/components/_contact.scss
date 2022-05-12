@@ -10,7 +10,7 @@
     grid-template-columns: repeat(2, minmax(min-content, max-content));
     align-items: center;
     justify-content: space-evenly;
-    width: 90%;
+    width: 95%;
 
     @include responsive(phone) {
         text-align: left;

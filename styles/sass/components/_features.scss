@@ -18,7 +18,8 @@
     }
 
     @include responsive(phone) {
-        margin: 1.5rem auto;
+        margin: $gap auto;
+        padding: $gap;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }

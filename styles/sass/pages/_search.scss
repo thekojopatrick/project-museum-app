@@ -61,6 +61,22 @@
             color: #2b2b2b;
             font-size: 1.6rem;
         }
+
+        &__found {
+            display: flex;
+            align-items: center;
+            gap: $gap;
+
+            span {
+                display: inline-flex;
+            }
+
+            @include responsive(phone) {
+                p {
+                    display: none;
+                }
+            }
+        }
     }
 
     &-btn {
@@ -133,6 +149,37 @@
     &:hover &__details {
         &--title {
             text-decoration: underline;
+        }
+    }
+}
+
+// --- SORT --- //
+
+.sort {
+    &-results {
+        display: flex;
+        align-items: center;
+        gap: $gap;
+    }
+
+    form {
+        label {
+            margin: 1rem;
+        }
+    }
+
+    &-input {
+        font-size: large;
+        padding: 1rem 1.6rem;
+        border-radius: 1px;
+        background-color: $button-background;
+        cursor: pointer;
+
+        option {
+            background-color: $white;
+            &:hover {
+                background-color: $link;
+            }
         }
     }
 }

@@ -1,28 +1,20 @@
 //--- Exhibition Section --- //
 
 .section-exhibitions {
-    grid-row: 5 / 6;
-    grid-column: $full-grid;
-    align-self: center;
-    _height: 40rem;
     margin: 8rem 0;
     padding-left: 1.5rem;
-    _margin-bottom: 4rem;
     display: grid;
     grid-template-columns: $column-grid-12;
     overflow: hidden;
     grid-template-rows: 10rem max-content;
 
     @include responsive(tab-land) {
-        display: grid;
-        _grid-template-columns: $column-grid-4;
         margin: 4rem 0;
         width: 100vw;
     }
     @include responsive(phone) {
         display: flex;
         flex-direction: column;
-        border: solid red 2px;
     }
 }
 

@@ -1,5 +1,11 @@
+import Accordion from "./Accordion";
+
 const Filters = () => {
-    return <div>Filters</div>;
+    return (
+        <div >
+           <Accordion/>
+        </div>
+    );
 };
 
 export default Filters;

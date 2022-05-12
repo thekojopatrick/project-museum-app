@@ -2,6 +2,7 @@
     &-container {
         display: grid;
         grid-template-columns: $column-grid-12;
+        grid-template-rows: min-content 1fr;
         gap: $gap;
 
         @include responsive(tab-land) {
@@ -9,8 +10,9 @@
         }
         @include responsive(phone) {
             display: flex;
+            flex-direction: column;
             width: 100%;
-            align-items: center;
+            _align-items: center;
             justify-content: center;
         }
         @include responsive(small-phone) {
@@ -32,6 +34,23 @@
         }
     }
 
+    &-body {
+        grid-column: $center-grid;
+        _display: flex;
+        display: grid;
+        gap: 3rem 1.5rem;
+        justify-content: space-between;
+        grid-template-columns: 30rem 1fr;
+
+        @include responsive(phone) {
+            display: flex;
+            flex-direction: column;
+        }
+        @include responsive(small-phone) {
+            display: block;
+        }
+    }
+
     &-results {
         _margin-top: 4rem;
 
@@ -45,6 +64,7 @@
     }
 
     &-btn {
+        display: none;
         background-color: $button-background;
     }
 }

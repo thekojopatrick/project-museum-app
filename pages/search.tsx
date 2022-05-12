@@ -1,33 +1,20 @@
+import Arts from "../components/Arts";
+import Filters from "../components/Filters";
 import Layout from "../components/Layout";
-import { FiFilter } from "react-icons/fi";
 import SearchField from "../components/SearchField";
+import Sort from "../components/Sort";
 
 const Search = () => {
     return (
-        <Layout parentClass="search-container">
+        <Layout parentClass="search-container border-red">
             <header className="search-header">
                 <SearchField />
-                <>
-                    <h3 className="heading heading-3 mt-lg-x search-results search-results__title">
-                        Search
-                    </h3>
-                    <div className="result-description-with-filter">
-                        <p className="text-lg-x search-results search-results__description">
-                            Found 0 works
-                        </p>
-
-                        <div className="filter-container">
-                            <span className="color-selected"></span>
-                            <div className="color-swatch"></div>
-                        </div>
-
-                        <button className="btn btn-filter">
-                            <FiFilter className="icon icon-filter" />
-                            Filter
-                        </button>
-                    </div>
-                </>
+                <Sort />
             </header>
+            <main className="search-body border-blue">
+                <Filters />
+                <Arts />
+            </main>
         </Layout>
     );
 };

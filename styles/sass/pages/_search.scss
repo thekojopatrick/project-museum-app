@@ -71,7 +71,7 @@
                 display: inline-flex;
             }
 
-            @include responsive(phone) {
+            @include responsive(tab-port) {
                 p {
                     display: none;
                 }
@@ -156,6 +156,12 @@
 // --- SORT --- //
 
 .sort {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4rem auto;
     &-results {
         display: flex;
         align-items: center;
@@ -171,15 +177,39 @@
     &-input {
         font-size: large;
         padding: 1rem 1.6rem;
+        border: none;
+        outline: none;
         border-radius: 1px;
         background-color: $button-background;
         cursor: pointer;
+
+        @include responsive(phone) {
+            width: 95%;
+        }
+        @include responsive(small-phone) {
+            width: 85%;
+        }
 
         option {
             background-color: $white;
             &:hover {
                 background-color: $link;
             }
+        }
+    }
+
+    @include responsive(phone) {
+        flex-direction: column;
+        gap: $gap;
+
+        form {
+            min-width: 300px;
+        }
+
+        p,
+        label,
+        .btns-change-layouts {
+            display: none;
         }
     }
 }

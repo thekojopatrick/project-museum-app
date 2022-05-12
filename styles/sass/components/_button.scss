@@ -74,6 +74,11 @@ button {
         align-items: center;
         gap: 1rem;
     }
+
+    &-active{
+        background-color: black;
+        color: $white;
+    }
 }
 
 .open {

@@ -1,22 +1,25 @@
 //--- Features Section --- //
 
 .section-features {
-    grid-column: $center-grid;
-    grid-row: 4;
+    max-width: 1440px;
+    margin: 4rem auto;
     display: flex;
+    gap: $gap;
     flex-direction: row;
-
     align-items: center;
     justify-content: center;
+    width: 95%;
 
     @include responsive(tab-land) {
-        grid-column: $full-grid;
+        margin: 2rem auto;
+        width: 100%;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
 
     @include responsive(phone) {
-        grid-column: $center-grid;
+        margin: $gap auto;
+        padding: $gap;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }

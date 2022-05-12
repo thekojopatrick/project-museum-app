@@ -1,7 +1,8 @@
 .footer {
-    grid-row: 9 / -1;
-    grid-column: $full-grid;
-    height: 40rem;
+    width: 100vw;
+    _grid-row: 9 / -1;
+    _grid-column: $full-grid;
+    _height: 40rem;
     background-color: $black;
     _justify-self: center;
     display: grid;

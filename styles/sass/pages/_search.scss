@@ -1,31 +1,19 @@
 .search {
     &-container {
-        grid-template-rows: calc(5rem - 1.5rem) calc(7rem - 1.5rem) calc(40rem - 1.5rem) repeat(
-                2,
-                minmax(min-content, 1fr)
-            );
-
         @include responsive(tab-land) {
-            grid-template-rows: calc(5rem - 1.5rem) calc(7rem - 1.5rem) calc(20rem - 1.5rem) repeat(
-                    2,
-                    minmax(min-content, 1fr)
-                ) !important;
         }
         @include responsive(phone) {
-            grid-template-columns: $column-grid-4;
-            grid-template-rows: calc(3rem - 1.5rem) calc(7rem - 1.5rem) calc(25rem - 1.5rem) repeat(
-                    2,
-                    minmax(min-content, 1fr)
-                ) !important;
+        }
+        @include responsive(small-phone) {
         }
     }
 
     &-header {
-        _margin-top: 4rem;
-        grid-column: $center-grid;
-        grid-row: 3;
-        align-self: center;
-        justify-self: center;
+        margin-top: 4rem;
+        // grid-column: $center-grid;
+        // grid-row: 3;
+        // align-self: center;
+        // justify-self: center;
         text-align: center;
     }
 

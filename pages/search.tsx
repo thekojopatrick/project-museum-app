@@ -4,7 +4,7 @@ import SearchField from "../components/SearchField";
 
 const Search = () => {
     return (
-        <Layout parentClass="container search-container">
+        <Layout parentClass="search-container">
             <header className="search-header">
                 <SearchField />
                 <>

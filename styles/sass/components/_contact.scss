@@ -1,4 +1,28 @@
+//--- Contact Section --- //
+
 .section-contact {
-    grid-row: 8 /9;
-    grid-column: center-start / center-end;
+    max-width: 1440px;
+    margin: 0 auto;
+    background: #f8f9fa;
+    height: 50rem;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    align-items: center;
+    justify-content: space-evenly;
+    width: 95%;
+
+    @include responsive(phone) {
+        text-align: left;
+    }
+}
+
+.contact {
+    &-information {
+        margin: 5rem 10rem;
+
+        @include responsive(phone) {
+            margin: 0;
+        }
+    }
 }

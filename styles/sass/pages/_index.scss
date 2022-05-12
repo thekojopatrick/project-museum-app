@@ -1,9 +1,9 @@
 //--- Shop Section --- //
 
 .section-shop {
-    grid-column: $center-grid;
-    grid-row: 6 / 7;
     _margin: 4rem 0;
+    max-width: 1440px;
+    margin: 0 auto;
     height: 50rem;
 
     display: grid;
@@ -102,32 +102,3 @@
     }
 }
 
-
-//--- Contact Section --- //
-.section-contact {
-    grid-row: 8 /9;
-    grid-column: $center-grid;
-    _justify-self: center;
-    background: #f8f9fa;
-    height: 50rem;
-    margin: 4rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(2, minmax(min-content, max-content));
-    align-items: center;
-    justify-content: space-evenly;
-
-    @include responsive(phone) {
-        text-align: left;
-    }
-}
-
-.contact {
-    &-information {
-        margin: 5rem 10rem;
-
-        @include responsive(phone) {
-            margin: 0;
-        }
-    }
-}

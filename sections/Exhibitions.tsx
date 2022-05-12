@@ -15,7 +15,7 @@ const Exhibitions = ({ options }: SlidesProps) => {
           </a>
         </Link>
       </div>
-      <div className="exhibitions-container mt-lg-x">
+      <div className="exhibitions-container">
         {exhibitions.map((exhibition) => {
           return <Exhibition key={exhibition.id} {...exhibition} />;
         })}

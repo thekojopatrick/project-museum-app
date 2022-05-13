@@ -1,0 +1,25 @@
+.section-breadcrumb {
+    width: 100%;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    background-color: $button-background;
+    color: black;
+
+    a {
+        &:hover {
+        }
+    }
+}
+
+.section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+@media screen and (min-width: 992px) {
+    .section-center {
+        width: 95vw;
+    }
+}

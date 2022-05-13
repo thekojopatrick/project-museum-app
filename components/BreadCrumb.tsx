@@ -9,8 +9,8 @@ const BreadCrumb = ({ title }: BreadCrumbProps) => {
         <section className="section-breadcrumb">
             <div className="section-center">
                 <h3>
-                    <Link href="/">Home</Link> <Link href="/arts">/ Arts</Link>/
-                    {title}
+                    <Link href="/">Home</Link>
+                    <Link href="/search">/ Arts Collections</Link> /{title}
                 </h3>
             </div>
         </section>

@@ -1,25 +1,23 @@
 .section-breadcrumb {
     width: 100%;
+    margin: 4rem auto;
+    grid-column: center-start/center-end;
     min-height: 20vh;
     display: flex;
     align-items: center;
     background-color: $button-background;
-    color: black;
-
+    color: $link;
+    font-size: medium;
     a {
+        color: $color-1;
         &:hover {
+            color: $color-2;
         }
     }
 }
 
 .section-center {
-    width: 90vw;
+    width: 90%;
     margin: 0 auto;
     max-width: 1440px;
-}
-
-@media screen and (min-width: 992px) {
-    .section-center {
-        width: 95vw;
-    }
 }

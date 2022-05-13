@@ -218,6 +218,18 @@ const exhibitions = [
     },
 ];
 
+const images = [
+    "https://picsum.photos/id/334/400/300",
+    "https://picsum.photos/id/239/400/600",
+    "https://picsum.photos/id/238/400/500",
+    "https://picsum.photos/id/212/400/600",
+    "https://picsum.photos/id/213/400/300",
+    "https://picsum.photos/id/214/400/600",
+    "https://picsum.photos/id/215/400/400",
+    "https://picsum.photos/id/116/400/600",
+    "https://picsum.photos/id/117/400/500"
+  ];
+
 const colorArray = [
     "#FF6633",
     "#FFB399",
@@ -272,6 +284,7 @@ const colorArray = [
 ];
 
 export {
+    images,
     colorArray,
     slideOptions,
     scrollOptions,

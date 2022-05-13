@@ -6,12 +6,12 @@ import Sort from "../components/Sort";
 
 const Search = () => {
     return (
-        <Layout parentClass="search-container border-red">
+        <Layout parentClass="search-container">
             <header className="search-header">
                 <SearchField />
                 <Sort />
             </header>
-            <main className="search-body border-blue">
+            <main className="search-body">
                 <Filters />
                 <Arts />
             </main>

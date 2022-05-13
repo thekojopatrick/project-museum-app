@@ -1,4 +1,3 @@
-import Link from "next/link";
 import ArtCard from "./ArtCard";
 
 import { images } from "../utils/constants";

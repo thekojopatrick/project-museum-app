@@ -4,9 +4,11 @@ import Products from "./products";
 
 const Store = () => {
     return (
-        <Layout>
-            Store
-            <Products />
+        <Layout title="Shop" className="main-container">
+            <div className="page-center">
+                Store
+                <Products />
+            </div>
         </Layout>
     );
 };

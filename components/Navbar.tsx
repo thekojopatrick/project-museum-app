@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="navbar">
             <div className="navbar__logo">
                 <Link href="/">
-                    <h3 className="text-lg-2x text--uppercase">Rijks museum</h3>
+                    <a className="text-lg-2x text--uppercase">Rijks museum</a>
                 </Link>
             </div>
             <nav className="navbar__nav">

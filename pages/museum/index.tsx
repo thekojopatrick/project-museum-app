@@ -7,7 +7,7 @@ import Sort from "../../components/Sort";
 
 const Museum = () => {
     return (
-        <Layout parentClass="search-container">
+        <Layout title="Museum" className="search-container">
             <BreadCrumb title="Museum"/>
             <header className="search-header">
                 <SearchField />

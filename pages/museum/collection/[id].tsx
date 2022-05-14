@@ -10,7 +10,7 @@ const ArtDetails = () => {
     const { id } = router.query;
 
     return (
-        <Layout parentClass="search-container">
+        <Layout className="search-container">
             <BreadCrumb title="collection" id={`${id}`} />
             <div className={"collection"} id="collection">
                 <div className="collection__content">

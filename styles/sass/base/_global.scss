@@ -40,18 +40,26 @@ body {
     width: 100vw;
 }
 
-.container {
+.main-container {
+    display: grid;
+    grid-template-columns: $column-grid-12;
+    grid-template-rows: min-content 1fr;
+    gap: $gap;
 
     @include responsive(tab-land) {
-       
+        grid-template-columns: $column-grid-8;
     }
-
-    @include responsive(tab-port) {
-  
-    }
-
     @include responsive(phone) {
-      
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        _align-items: center;
+        justify-content: center;
+    }
+    @include responsive(small-phone) {
+        display: block;
+        padding: 0.5rem;
+        //width: 90%;
     }
 }
 
@@ -76,28 +84,25 @@ body {
     }
 }
 
-.hero-container {
-}
-
-.features-container {
-}
-
-.about-container {
-}
-
-.exhibitions-container {
-}
-
-.contact-container {
-}
-
-.content {
-    max-width: 1140px;
-    margin: 0 auto;
-}
-
-.page{
+.page {
     height: 100vh;
     max-width: 1140px;
     margin: 0 auto;
+
+    &-center {
+        margin: 4rem auto;
+        grid-column: $center-grid;
+        width: 100%;
+        min-height: 90vh;
+        max-width: 1440px;
+
+        @include responsive(tab-land) {
+        }
+
+        @include responsive(tab-port) {
+        }
+
+        @include responsive(phone) {
+        }
+    }
 }

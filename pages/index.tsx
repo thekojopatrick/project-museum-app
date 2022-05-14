@@ -12,7 +12,7 @@ import {
 
 const Home: NextPage = () => {
     return (
-        <Layout title={"Home"} parentClass={"container"}>
+        <Layout className={"container"}>
             <Header options={slideOptions} />
             <Features />
             <About />

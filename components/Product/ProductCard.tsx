@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const ProductItem = () => {
+const ProductCard = () => {
     return (
         <div className="card card-body">
             <Image
@@ -20,7 +20,7 @@ const ProductItem = () => {
             <h3 className="text-left">$39.5</h3>
             <div className="text-right">
                 <Link
-                    href={`/shop/products/${1}`}
+                    href={`/shop/products/${2}`}
                     className="btn btn-link btn-sm mr-2"
                 >
                     Details
@@ -36,4 +36,4 @@ const ProductItem = () => {
     );
 };
 
-export default ProductItem;
+export default ProductCard;

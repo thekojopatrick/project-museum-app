@@ -1,5 +1,4 @@
 import ArtCard from "./ArtCard";
-
 import { images } from "../utils/constants";
 
 const Arts = () => {

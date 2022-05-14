@@ -32,23 +32,18 @@ const navlinks = [
     },
     {
         id: 2,
-        name: "About",
-        path: "#about",
+        name: "Exhibition",
+        path: "/museum",
     },
     {
         id: 3,
         name: "Giftshop",
-        path: "#shop",
+        path: "/shop",
     },
     {
         id: 4,
-        name: "Exhibition",
-        path: "/#exhibitions",
-    },
-    {
-        id: 5,
-        name: "Contact",
-        path: "/#contact",
+        name: "About",
+        path: "/#about",
     },
 ];
 
@@ -227,8 +222,8 @@ const images = [
     "https://picsum.photos/id/214/400/600",
     "https://picsum.photos/id/215/400/400",
     "https://picsum.photos/id/116/400/600",
-    "https://picsum.photos/id/117/400/500"
-  ];
+    "https://picsum.photos/id/117/400/500",
+];
 
 const colorArray = [
     "#FF6633",

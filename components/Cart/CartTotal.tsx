@@ -1,9 +1,5 @@
-import React from 'react'
-
 const CartTotal = () => {
-  return (
-    <div>CartTotal</div>
-  )
-}
+    return <div>CartTotal</div>;
+};
 
-export default CartTotal
+export default CartTotal;

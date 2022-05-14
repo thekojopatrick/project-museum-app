@@ -1,9 +1,5 @@
-import React from 'react'
-
 const AmountButton = () => {
-  return (
-    <div>AmountButton</div>
-  )
-}
+    return <div>AmountButton</div>;
+};
 
-export default AmountButton
+export default AmountButton;

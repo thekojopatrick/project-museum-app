@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import BreadCrumb from "../../components/BreadCrumb";
-import Layout from "../../components/Layout";
+import BreadCrumb from "../../../components/BreadCrumb";
+import Layout from "../../../components/Layout";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { images } from "../../utils/constants";
+import { images } from "../../../utils/constants";
 
 const ArtDetails = () => {
     const router = useRouter();
@@ -11,7 +11,7 @@ const ArtDetails = () => {
 
     return (
         <Layout parentClass="search-container">
-            <BreadCrumb title={`${id}`} />
+            <BreadCrumb title="collection" id={`${id}`} />
             <div className={"collection"} id="collection">
                 <div className="collection__content">
                     <div className="collection__image">

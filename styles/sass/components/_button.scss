@@ -20,18 +20,34 @@ button {
     transition: all 0.25s ease;
 
     &__icon {
-        width: 2.4rem;
-        height: 2.4rem;
-        color: black;
+        width: 24px;
+        height: 24px;
+        _color: black;
         fill: currentColor;
     }
 
-    &-search {
-        margin-right: 0.8rem;
+    &--cart {
+        padding: 0.8rem;
+        font-size: medium !important;
+        font-weight: 400;
+        &:active,
+        &:hover {
+            background-color: transparent !important;
+            color: $black !important;
+            text-decoration: underline;
+        }
+    }
+    &--search {
     }
 
-    &-menu {
-        margin-left: 0.8rem;
+    &--menu {
+    }
+    &--user {
+        &:active,
+        &:hover {
+            background-color: transparent !important;
+            color: $link !important;
+        }
     }
 
     &-filter {
@@ -75,7 +91,7 @@ button {
         gap: 1rem;
     }
 
-    &-active{
+    &-active {
         background-color: black;
         color: $white;
     }

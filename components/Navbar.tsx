@@ -1,4 +1,5 @@
-import { BiSearch, BiMenu } from "react-icons/bi";
+import { BiCart } from "react-icons/bi";
+import { AiOutlineUser,AiOutlineMenu } from "react-icons/ai";
 import Link from "next/link";
 import { navlinks } from "../utils/constants";
 
@@ -23,14 +24,20 @@ const Navbar = () => {
                     })}
                 </ul>
             </nav>
-            <div className="navbar__buttons">
-                <Link href={"/search"}>
-                    <a className="btn btn--search">
-                        <BiSearch className="btn__icon icon-search" />
+            <div className="navbar__buttons btn-group">
+                <Link href={"/shop/cart"}>
+                    <a className="btn btn--cart">
+                        <BiCart className="btn__icon icon-cart" />
+                        Cart (0)
+                    </a>
+                </Link>
+                <Link href={"#login"}>
+                    <a className="btn btn--user">
+                        <AiOutlineUser className="btn__icon icon-user" />
                     </a>
                 </Link>
                 <button className="btn btn--menu">
-                    <BiMenu className="btn__icon icon-menu" />
+                    <AiOutlineMenu className="btn__icon icon icon-menu" />
                 </button>
             </div>
         </div>

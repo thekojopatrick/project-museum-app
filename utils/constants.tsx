@@ -37,7 +37,7 @@ const navlinks = [
     },
     {
         id: 3,
-        name: "Shop",
+        name: "Giftshop",
         path: "#shop",
     },
     {

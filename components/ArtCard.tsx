@@ -13,7 +13,11 @@ interface ArtCardProps {
 
 const ArtCard = ({ onClick, img, title, description, id }: ArtCardProps) => {
     return (
-        <Link href={`/collection/${id}`} key={id} passHref>
+        <Link
+            href={{ pathname: `/collection/[id]`, query: { id: id } }}
+            key={id}
+            passHref
+        >
             <div onClick={() => onClick} className="result-card">
                 <figure className="result-card__thumbnails">
                     <img

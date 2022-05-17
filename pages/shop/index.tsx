@@ -6,10 +6,7 @@ const Store = () => {
     return (
         <Layout title="Shop" className="main-container">
             <div className="page-center">
-                <div className="text-center mt-5">
-                    <h1>Rijks GiftStore</h1>
-                    <p>This is the Store Page.</p>
-                </div>
+                <div className="text-center mt-5"></div>
                 <Products />
             </div>
         </Layout>

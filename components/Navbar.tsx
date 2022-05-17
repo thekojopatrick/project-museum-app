@@ -1,14 +1,19 @@
 import { BiCart } from "react-icons/bi";
-import { AiOutlineUser,AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineUser, AiOutlineMenu } from "react-icons/ai";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { navlinks } from "../utils/constants";
 
 const Navbar = () => {
+    const router = useRouter();
+    const path = router.pathname;
     return (
         <div className="navbar">
             <div className="navbar__logo">
                 <Link href="/">
-                    <a className="text-lg-2x text--uppercase">Rijks museum</a>
+                    <a className="text-lg-2x text--uppercase">
+                        Rijks {path === "/shop" ? "Giftshop" : "museum"}
+                    </a>
                 </Link>
             </div>
             <nav className="navbar__nav">

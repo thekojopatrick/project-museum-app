@@ -1,3 +1,99 @@
 .section-shop {
     grid-column: center-start / center-end;
 }
+
+.img-fluid,
+.img-thumbnail {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    width: auto !important;
+    height: auto;
+    max-height: 200px !important;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0px;
+    overflow-wrap: break-word;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-image: initial;
+
+    &-body {
+        min-height: 1px;
+        flex: 1 1 auto;
+        padding: 1.25rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        font-weight: 200;
+        color: $light-gray;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+        color: $deep-gray;
+        text-align: left !important;
+    }
+
+    .img-fluid {
+        margin: 0px auto 10px !important;
+    }
+}
+
+.p {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 15px;
+    }
+}
+
+// --- SHOP BUTTON ---//
+
+.shop-btn {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 0.8rem 1.2rem;
+    outline: none;
+    border: none;
+
+    &__primary {
+        border: 1px solid $deep-gray;
+        background-color: $deep-gray;
+        color: $white;
+    }
+
+    &__outline {
+        border: 1px solid #000;
+    }
+
+    &__link {
+        &:active,
+        &:hover {
+            background-color: transparent !important;
+            color: #000 !important;
+            text-decoration: underline;
+        }
+    }
+
+    &:active,
+    &:hover {
+        background-color: black;
+        color: $white;
+    }
+}

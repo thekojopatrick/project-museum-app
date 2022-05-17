@@ -1,26 +1,26 @@
 import ProductItem from "./productItem";
-
+import { dummyProducts as products } from "../../../utils/dummy";
 const Products = () => {
     return (
         <div>
-            <div className="row">
-                <div className="col-sm-8">
-                    <div className="py-3">{0} Products</div>
-                </div>
-                <div className="col-sm-4">
-                    <div className="form-group">
+            <div className="products-top-row">
+                <div className="total-products">{products.length} Products</div>
+                <div className="shop-search">
+                    <div className="shop-form-group">
                         <input
                             type="text"
                             name=""
                             placeholder="Search product"
-                            className="form-control"
+                            className="shop-form-control"
                             id=""
                         />
                     </div>
                 </div>
             </div>
             <div className={"p__grid"}>
-                <ProductItem />
+                {products.map((product) => (
+                    <ProductItem key={product.id} product={product} />
+                ))}
             </div>
         </div>
     );

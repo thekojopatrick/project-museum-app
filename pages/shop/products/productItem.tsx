@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Products from "./products";
 
 interface ProductProps {
     product: any;
@@ -18,7 +19,12 @@ const ProductItem = ({ product: { id, name, price, photo } }: ProductProps) => {
             <p>{name}</p>
             <h3 className="text-left">${price}</h3>
             <div className="btn-group justify-end">
-                <Link href={`/shop/products/${id}`}>
+                <Link
+                    href={{
+                        pathname: "/shop/products/[id]",
+                        query: { id: id },
+                    }}
+                >
                     <a className="shop-btn shop-btn__link mr-2">Details</a>
                 </Link>
                 <button className="shop-btn shop-btn__outline">Add more</button>

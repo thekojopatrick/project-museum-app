@@ -225,6 +225,10 @@ const images = [
     "https://picsum.photos/id/117/400/500",
 ];
 
+const productColors = [
+    "#FFB399", "#E6B3B3","#FF1A66","#4DB3FF",
+]
+
 const colorArray = [
     "#FF6633",
     "#FFB399",
@@ -290,4 +294,5 @@ export {
     exhibitions,
     footer,
     navlinks,
+    productColors
 };

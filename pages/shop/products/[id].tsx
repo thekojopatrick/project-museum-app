@@ -2,8 +2,12 @@ import { useRouter } from "next/router";
 import BreadCrumb from "../../../components/BreadCrumb";
 import Layout from "../../../components/Layout";
 import ProductImages from "../../../components/Product/ProductImages";
-import { images } from "../../../utils/constants";
+import { images, productColors } from "../../../utils/constants";
 import styled from "styled-components";
+import ProductColors from "../../../components/Product/ProductColors";
+import ProductSizes from "../../../components/Product/ProductSizes";
+import SelectQuantity from "../../../components/Product/SelectQuantity";
+import AddToCart from "../../../components/Product/AddToCart";
 
 const ProductDetails = () => {
     const router = useRouter();
@@ -17,11 +21,10 @@ const ProductDetails = () => {
                 </button>
                 <div className="product-center">
                     <ProductImages images={images} />
-                    <section className="content">
-                        <h2>
+                    <section className="">
+                        <h2 className="product-name">
                             {"Bellavista Midi Dress Careyes Floral Marigold"}
                         </h2>
-
                         <h5 className="price">${"48"}</h5>
                         <p className="desc">
                             {
@@ -33,12 +36,16 @@ const ProductDetails = () => {
                             {"In stock"}
                         </p>
                         <p className="info">
-                            <span>SKU:</span>
+                            <ProductColors colors={productColors} />
                         </p>
                         <p className="info">
-                            <span>Brand:</span>
+                            <ProductSizes />
+                        </p>
+                        <p className="info">
+                            <SelectQuantity />
                         </p>
                         <hr />
+                        <AddToCart />
                     </section>
                 </div>
             </Wrapper>
@@ -47,23 +54,36 @@ const ProductDetails = () => {
 };
 
 const Wrapper = styled.div`
-
     .product-center {
         display: grid;
         gap: 4rem;
         margin-top: 2rem;
     }
+
+    .product-name {
+        font-size: 22.5px;
+        line-height: 1.3rem;
+    }
     .price {
+        font-size: 24px;
+        font-weight: lighter;
+        margin: 1rem 0;
     }
     .desc {
+        font-size: 1rem;
+        line-height: 1.9;
+        letter-spacing: 0.03em;
+        margin-bottom: 1rem;
     }
     .info {
+        font-size: 1.6rem;
+        margin: 1rem 0;
     }
 
     @media (min-width: 992px) {
         .product-center {
             grid-template-columns: 1fr 1fr;
-            align-items: center;
+            align-items: stretch;
         }
         .price {
         }

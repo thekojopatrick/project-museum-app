@@ -40,8 +40,12 @@ const ProductColors = ({ colors = [] }: ProductColorsProps) => {
 const Wrapper = styled.div`
     display: inline-flex;
     flex-direction: column;
-    gap:1rem;
+    gap: 1rem;
 
-`
+    .color-picker__colors {
+        gap: 4px;
+        background-color: transparent;
+    }
+`;
 
 export default ProductColors;

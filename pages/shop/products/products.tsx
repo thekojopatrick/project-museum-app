@@ -9,10 +9,10 @@ const Products = () => {
                     <div className="shop-form-group">
                         <input
                             type="text"
-                            name=""
+                            name="search-product"
                             placeholder="Search product"
                             className="shop-form-control"
-                            id=""
+                            id="search-product"
                         />
                     </div>
                 </div>

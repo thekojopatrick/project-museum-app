@@ -2,12 +2,12 @@ import { useRouter } from "next/router";
 import BreadCrumb from "../../../components/BreadCrumb";
 import Layout from "../../../components/Layout";
 import ProductImages from "../../../components/Product/ProductImages";
-import { images, productColors } from "../../../utils/constants";
 import styled from "styled-components";
 import ProductColors from "../../../components/Product/ProductColors";
 import ProductSizes from "../../../components/Product/ProductSizes";
 import SelectQuantity from "../../../components/Product/SelectQuantity";
 import AddToCart from "../../../components/Product/AddToCart";
+import { images, productColors, productSizes } from "../../../utils/constants";
 
 const ProductDetails = () => {
     const router = useRouter();
@@ -39,7 +39,7 @@ const ProductDetails = () => {
                             <ProductColors colors={productColors} />
                         </p>
                         <p className="info">
-                            <ProductSizes />
+                            <ProductSizes sizes={productSizes} />
                         </p>
                         <p className="info">
                             <SelectQuantity />

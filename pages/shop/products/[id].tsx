@@ -62,7 +62,7 @@ const Wrapper = styled.div`
 
     .product-name {
         font-size: 22.5px;
-        line-height: 1.3rem;
+        line-height: 1.3;
     }
     .price {
         font-size: 24px;
@@ -70,7 +70,7 @@ const Wrapper = styled.div`
         margin: 1rem 0;
     }
     .desc {
-        font-size: 1rem;
+        font-size: 1.6rem;
         line-height: 1.9;
         letter-spacing: 0.03em;
         margin-bottom: 1rem;
@@ -78,6 +78,10 @@ const Wrapper = styled.div`
     .info {
         font-size: 1.6rem;
         margin: 1rem 0;
+
+        span{
+            font-size: 1.6rem;
+        }
     }
 
     @media (min-width: 992px) {

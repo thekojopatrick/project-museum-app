@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import BreadCrumb from "../../../components/BreadCrumb";
 import Layout from "../../../components/Layout";
 import ProductImages from "../../../components/Product/ProductImages";
 import styled from "styled-components";
@@ -8,6 +7,7 @@ import ProductSizes from "../../../components/Product/ProductSizes";
 import SelectQuantity from "../../../components/Product/SelectQuantity";
 import AddToCart from "../../../components/Product/AddToCart";
 import { images, productColors, productSizes } from "../../../utils/constants";
+import Link from "next/link";
 
 const ProductDetails = () => {
     const router = useRouter();
@@ -15,10 +15,11 @@ const ProductDetails = () => {
     return (
         <Layout className="main-container">
             <Wrapper className="page-center">
-                <BreadCrumb title="Products" id={`${id}`} />
-                <button className="shop-btn shop-btn__primary">
-                    Back to Products
-                </button>
+                <Link href="/shop">
+                    <a className="shop-btn shop-btn__primary">
+                        Back to Products
+                    </a>
+                </Link>
                 <div className="product-center">
                     <ProductImages images={images} />
                     <section className="">
@@ -79,7 +80,7 @@ const Wrapper = styled.div`
         font-size: 1.6rem;
         margin: 1rem 0;
 
-        span{
+        span {
             font-size: 1.6rem;
         }
     }

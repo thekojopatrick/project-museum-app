@@ -43,7 +43,6 @@ const Wrapper = styled.div`
         height: 32px;
         text-align: center;
         font-size: larger;
-        padding: 2px;
         border: solid 1px black;
     }
 

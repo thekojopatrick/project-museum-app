@@ -7,8 +7,9 @@ const AddToCart = () => {
             <button className="shop-btn shop-btn__outline" disabled>
                 Out of Stock
             </button>
+            <button className="shop-btn shop-btn__outline">Add to cart</button>
             <Link href="/shop/cart">
-                <a className="shop-btn shop-btn__primary">Add to cart</a>
+                <a className="shop-btn shop-btn__primary">View Bag</a>
             </Link>
         </Wrapper>
     );
